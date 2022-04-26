@@ -8,6 +8,7 @@ jobs:
       DOCKER_OPTS: "-D"
     steps:
       - run: sudo service docker restart
+      - run: sudo echo '{"debug": true}' > /etc/docker/daemon.json
       - run: ps aux | grep docker | grep -v grep
       - run:
           command: sudo journalctl -fu docker.service

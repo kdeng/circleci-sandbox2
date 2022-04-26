@@ -1,8 +1,6 @@
 version: 2.1
 jobs:
   build:
-    docker:
-      - image: cimg/node:14.10.1 # the primary container, where your job's commands are run
+    machine: true
     steps:
-      - checkout # check out the code in the project directory
-      - run: echo "hello world" # run the `echo` command
+      - run: docker pull gcr.io/cloud-builders/java/javac@sha256:9fd1faadf88232878ff171f969e0c0e78b9f1faaf6c517fc8d874b8f0102f4d2

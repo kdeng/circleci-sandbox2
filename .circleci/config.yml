@@ -9,7 +9,7 @@ jobs:
     steps:
       #- run: sudo service docker restart
       - run: |
-          sudo bash -c "'if [ ! -f /etc/docker/daemon.json ]; then sudo echo \"{}\" > /etc/docker/daemon.json; fi; sudo cat \<<< \$(jq \".\\\"debug\\\" = true\" /etc/docker/daemon.json) > /etc/docker/daemon.json; sudo service docker restart'"
+          sudo bash -c "'if [ ! -f /etc/docker/daemon.json ]; then echo \"{}\" > /etc/docker/daemon.json; fi; cat \<<< \$(jq \".\\\"debug\\\" = true\" /etc/docker/daemon.json) > /etc/docker/daemon.json; service docker restart'"
       - run: ps aux | grep docker | grep -v grep
       - run:
           command: sudo journalctl -fu docker.service

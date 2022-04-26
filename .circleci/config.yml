@@ -7,9 +7,9 @@ jobs:
     environment:
       DOCKER_OPTS: "-D"
     steps:
-      - run: sudo service docker restart
+      #- run: sudo service docker restart
       - run: |
-          sudo echo '{"debug": true}' > /etc/docker/daemon.json
+          sudo bash -c "'if [ ! -f /etc/docker/daemon.json ]; then sudo echo \"{}\" > /etc/docker/daemon.json; fi; sudo cat \<<< \$(jq \".\\\"debug\\\" = true\" /etc/docker/daemon.json) > /etc/docker/daemon.json; sudo service docker restart'"
       - run: ps aux | grep docker | grep -v grep
       - run:
           command: sudo journalctl -fu docker.service

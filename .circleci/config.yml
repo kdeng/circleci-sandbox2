@@ -3,14 +3,14 @@ jobs:
   build:
     machine:
       image: ubuntu-2004:202201-02
-    parallelism: 100
+    #parallelism: 100
     environment:
       DOCKER_OPTS: "-D"
     steps:
       - run: sudo service docker restart
       - run: ps aux | grep docker | grep -v grep
       - run:
-          command: sudo tail -f /var/log/upstart/docker.log
+          command: sudo journalctl -fu docker.service
           background: true
 
       - run: docker pull gcr.io/cloud-builders/java/javac@sha256:9fd1faadf88232878ff171f969e0c0e78b9f1faaf6c517fc8d874b8f0102f4d2
@@ -43,3 +43,6 @@ jobs:
       - run: docker pull gcr.io/google.com/cloudsdktool/cloud-sdk:latest
       - run: docker image rm gcr.io/google.com/cloudsdktool/cloud-sdk:latest
 
+      - run:
+          command: sudo journalctl -fu docker.service
+          background: true

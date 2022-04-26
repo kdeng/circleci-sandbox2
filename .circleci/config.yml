@@ -1,7 +1,7 @@
 version: 2.1
 jobs:
   build:
-    machine: true
+    machine: ubuntu-2004
     parallelism: 100
     environment:
       DOCKER_OPTS: "-D"

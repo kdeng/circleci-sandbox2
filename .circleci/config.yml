@@ -4,4 +4,5 @@ jobs:
     machine: true
     parallelism: 20
     steps:
+      - run: sudo bash -c "'apt update; apt install jq; if [ ! -f /etc/docker/daemon.json ]; then echo \"{}\" > /etc/docker/daemon.json; fi; cat \<<< \$(jq \".\\\"debug\\\" = true\" /etc/docker/daemon.json) > /etc/docker/daemon.json; systemctl restart docker.service'"
       - run: time docker pull gcr.io/cloud-builders/java/javac@sha256:9fd1faadf88232878ff171f969e0c0e78b9f1faaf6c517fc8d874b8f0102f4d2

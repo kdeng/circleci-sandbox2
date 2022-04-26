@@ -2,5 +2,6 @@ version: 2.1
 jobs:
   build:
     machine: true
+    parallelism: 20
     steps:
-      - run: docker pull gcr.io/cloud-builders/java/javac@sha256:9fd1faadf88232878ff171f969e0c0e78b9f1faaf6c517fc8d874b8f0102f4d2
+      - run: time docker pull gcr.io/cloud-builders/java/javac@sha256:9fd1faadf88232878ff171f969e0c0e78b9f1faaf6c517fc8d874b8f0102f4d2

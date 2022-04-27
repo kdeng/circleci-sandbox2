@@ -3,7 +3,7 @@ jobs:
   build:
     machine:
       image: ubuntu-2004:202201-02
-    parallelism: 2
+    parallelism: 4
     environment:
       DOCKER_OPTS: "-D"
     steps:

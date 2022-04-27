@@ -3,11 +3,11 @@ jobs:
   build:
     machine:
       image: ubuntu-2004:202201-02
-    parallelism: 1
+    parallelism: 2
     environment:
       DOCKER_OPTS: "-D"
     steps:
-      #- run: sudo service docker restart
+      - run: sudo service docker restart
       - run: |
           sudo bash -c "'if [ ! -f /etc/docker/daemon.json ]; then echo \"{}\" > /etc/docker/daemon.json; fi; cat \<<< \$(jq \".\\\"debug\\\" = true\" /etc/docker/daemon.json) > /etc/docker/daemon.json; service docker restart'"
       - run: ps aux | grep docker | grep -v grep

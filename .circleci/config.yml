@@ -15,34 +15,34 @@ jobs:
           command: sudo journalctl -fu docker.service
           background: true
 
-      - run: curl ipinfo.io && docker pull gcr.io/cloud-builders/java/javac@sha256:9fd1faadf88232878ff171f969e0c0e78b9f1faaf6c517fc8d874b8f0102f4d2
+      - run: ping -c 4 gcr.io && curl ipinfo.io && docker pull gcr.io/cloud-builders/java/javac@sha256:9fd1faadf88232878ff171f969e0c0e78b9f1faaf6c517fc8d874b8f0102f4d2
       - run: docker image rm gcr.io/cloud-builders/java/javac@sha256:9fd1faadf88232878ff171f969e0c0e78b9f1faaf6c517fc8d874b8f0102f4d2
 
-      - run: curl ipinfo.io && docker pull gcr.io/cloud-builders/java/javac@sha256:9fd1faadf88232878ff171f969e0c0e78b9f1faaf6c517fc8d874b8f0102f4d2
+      - run: ping -c 4 gcr.io && curl ipinfo.io && docker pull gcr.io/cloud-builders/java/javac@sha256:9fd1faadf88232878ff171f969e0c0e78b9f1faaf6c517fc8d874b8f0102f4d2
       - run: docker image rm gcr.io/cloud-builders/java/javac@sha256:9fd1faadf88232878ff171f969e0c0e78b9f1faaf6c517fc8d874b8f0102f4d2
 
-      - run: curl ipinfo.io && docker pull gcr.io/cloud-builders/java/javac@sha256:9fd1faadf88232878ff171f969e0c0e78b9f1faaf6c517fc8d874b8f0102f4d2
+      - run: ping -c 4 gcr.io && curl ipinfo.io && docker pull gcr.io/cloud-builders/java/javac@sha256:9fd1faadf88232878ff171f969e0c0e78b9f1faaf6c517fc8d874b8f0102f4d2
       - run: docker image rm gcr.io/cloud-builders/java/javac@sha256:9fd1faadf88232878ff171f969e0c0e78b9f1faaf6c517fc8d874b8f0102f4d2
 
-      - run: curl ipinfo.io && docker pull gcr.io/cloud-builders/java/javac@sha256:9fd1faadf88232878ff171f969e0c0e78b9f1faaf6c517fc8d874b8f0102f4d2
+      - run: ping -c 4 gcr.io && curl ipinfo.io && docker pull gcr.io/cloud-builders/java/javac@sha256:9fd1faadf88232878ff171f969e0c0e78b9f1faaf6c517fc8d874b8f0102f4d2
       - run: docker image rm gcr.io/cloud-builders/java/javac@sha256:9fd1faadf88232878ff171f969e0c0e78b9f1faaf6c517fc8d874b8f0102f4d2
 
-      - run: curl ipinfo.io && docker pull gcr.io/cloud-builders/java/javac@sha256:9fd1faadf88232878ff171f969e0c0e78b9f1faaf6c517fc8d874b8f0102f4d2
+      - run: ping -c 4 gcr.io && curl ipinfo.io && docker pull gcr.io/cloud-builders/java/javac@sha256:9fd1faadf88232878ff171f969e0c0e78b9f1faaf6c517fc8d874b8f0102f4d2
       - run: docker image rm gcr.io/cloud-builders/java/javac@sha256:9fd1faadf88232878ff171f969e0c0e78b9f1faaf6c517fc8d874b8f0102f4d2
 
-      - run: curl ipinfo.io && docker pull gcr.io/google.com/cloudsdktool/cloud-sdk:latest
+      - run: ping -c 4 gcr.io && curl ipinfo.io && docker pull gcr.io/google.com/cloudsdktool/cloud-sdk:latest
       - run: docker image rm gcr.io/google.com/cloudsdktool/cloud-sdk:latest
 
-      - run: curl ipinfo.io && docker pull gcr.io/google.com/cloudsdktool/cloud-sdk:latest
+      - run: ping -c 4 gcr.io && curl ipinfo.io && docker pull gcr.io/google.com/cloudsdktool/cloud-sdk:latest
       - run: docker image rm gcr.io/google.com/cloudsdktool/cloud-sdk:latest
 
-      - run: curl ipinfo.io && docker pull gcr.io/google.com/cloudsdktool/cloud-sdk:latest
+      - run: ping -c 4 gcr.io && curl ipinfo.io && docker pull gcr.io/google.com/cloudsdktool/cloud-sdk:latest
       - run: docker image rm gcr.io/google.com/cloudsdktool/cloud-sdk:latest
 
-      - run: curl ipinfo.io && docker pull gcr.io/google.com/cloudsdktool/cloud-sdk:latest
+      - run: ping -c 4 gcr.io && curl ipinfo.io && docker pull gcr.io/google.com/cloudsdktool/cloud-sdk:latest
       - run: docker image rm gcr.io/google.com/cloudsdktool/cloud-sdk:latest
 
-      - run: curl ipinfo.io && docker pull gcr.io/google.com/cloudsdktool/cloud-sdk:latest
+      - run: ping -c 4 gcr.io && curl ipinfo.io && docker pull gcr.io/google.com/cloudsdktool/cloud-sdk:latest
       - run: docker image rm gcr.io/google.com/cloudsdktool/cloud-sdk:latest
 
       - run:
